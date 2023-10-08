@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        img{
+            height: 300px;
+            width: 500px;
+        }
+    </style>
+</head>
+<body>
+    <center>
+        <h1>show image form databse</h1>
+        {% if key1 %}
+
+        {% for i in key1 %}
+          IMAG-ENAME:{{i.Imgname}} <br>
+          <img src="{{MEDIA_URL}}{{i.Imgsrc.url}}" alt=""><br><br>
+         {% endfor %}
+
+
+        {% endif %}
+    </center>
+</body>
+</html>
